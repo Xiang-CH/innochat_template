@@ -129,3 +129,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 /prepdoc/.venv
+
+
+# data files
+prepdoc/data/*
+DataBase/*
+.DS_Store
+**/.DS_Store
