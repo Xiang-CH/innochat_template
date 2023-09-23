@@ -1,0 +1,9 @@
+azure-identity==1.13.0
+Flask==2.2.5
+langchain==0.0.187
+openai[datalib]==0.27.8
+azure-search-documents==11.4.0b6
+azure-cognitiveservices-speech
+tiktoken==0.4.0
+python-dotenv
+# fastlangid==1.0.11
