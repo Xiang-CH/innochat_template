@@ -133,8 +133,11 @@ dist
 
 # data files
 prepdoc/data/*
+!prepdoc/data/add you doc here.txt
 database/*
-app/backend/static/database
+!database/blobs will be here.txt
+app/backend/static/database/*
+!app/backend/static/database/blobs will be here.txt
 .DS_Store
 **/.DS_Store
 

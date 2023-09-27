@@ -7,10 +7,10 @@ Write-Host ""
 
 ./backend_env/Scripts/python -m pip install --upgrade pip
 ./backend_env/Scripts/python -m pip install -r requirements.txt
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "Failed to restore backend python packages"
-    exit $LASTEXITCODE
-}
+# if ($LASTEXITCODE -ne 0) {
+#     Write-Host "Failed to restore backend python packages"
+#     exit $LASTEXITCODE
+# }
 
 Write-Host ""
 Write-Host "Starting backend"

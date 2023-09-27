@@ -6,4 +6,3 @@ azure-search-documents==11.4.0b6
 azure-cognitiveservices-speech
 tiktoken==0.4.0
 python-dotenv
-# fastlangid==1.0.11
