@@ -18,8 +18,7 @@ load_dotenv()
 AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE") or "innochat-workshop"
 AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX") or "index"
 
-AZURE_OPENAI_SERVICE = os.environ.get("AZURE_OPENAI_SERVICE") or "innochat-workshop-openai"
-# AZURE_OPENAI_GPT_DEPLOYMENT = os.environ.get("AZURE_OPENAI_GPT_DEPLOYMENT") or "chat"
+AZURE_OPENAI_ENDPOINT = os.environ.get("AZURE_OPENAI_ENDPOINT") or "https://workshop-apim.azure-api.net"
 AZURE_OPENAI_CHATGPT_DEPLOYMENT = os.environ.get("AZURE_OPENAI_CHATGPT_DEPLOYMENT") or "chat"
 AZURE_OPENAI_CHATGPT_MODEL = os.environ.get("AZURE_OPENAI_CHATGPT_MODEL") or "gpt-35-turbo"
 AZURE_OPENAI_EMB_DEPLOYMENT = os.environ.get("AZURE_OPENAI_EMB_DEPLOYMENT") or "embedding"
@@ -29,28 +28,14 @@ SPEECH_KEY = os.environ.get("SPEECH_KEY")
 KB_FIELDS_CONTENT = os.environ.get("KB_FIELDS_CONTENT") or "content"
 KB_FIELDS_SOURCEPAGE = os.environ.get("KB_FIELDS_SOURCEPAGE") or "sourcepage"
 
-# Use the current user identity to authenticate with Azure OpenAI, Cognitive Search and Blob Storage (no secrets needed, 
-# just use 'az login' locally, and managed identity when deployed on Azure). If you need to use keys, use separate AzureKeyCredential instances with the 
-# keys for each service
-# If you encounter a blocking error during a DefaultAzureCredntial resolution, you can exclude the problematic credential by using a parameter (ex. exclude_shared_token_cache_credential=True)
-# azure_credential = DefaultAzureCredential(exclude_shared_token_cache_credential=True)
+# Use the current user identity to authenticate with Azure OpenAI, Cognitive Search
 azure_search_credential = AzureKeyCredential(os.environ.get("AZURE_SEARCH_KEY"))
 
 # Used by the OpenAI SDK
 openai.api_type = "azure"
-openai.api_base = f"https://{AZURE_OPENAI_SERVICE}.openai.azure.com"
+openai.api_base = AZURE_OPENAI_ENDPOINT
 openai.api_version = "2023-07-01-preview"
-
-
-# Comment these three lines out if using keys, set your API key in the OPENAI_API_KEY environment variable instead
-# openai.api_type = "azure_ad"
-# openai_token = azure_credential.get_token("https://cognitiveservices.azure.com/.default")
-# openai.api_key = openai_token.token
 openai.api_key =  os.environ.get("AZURE_OPENAI_KEY")
-
-# # Comment these two lines out if using keys, set your API key in the SPEECH_KEY environment variable instead
-# ibc = InteractiveBrowserCredential()
-# speech_token = ibc.get_token("https://cognitiveservices.azure.com/.default")
 
 # Set up clients for Cognitive Search and Storage
 search_client = SearchClient(
