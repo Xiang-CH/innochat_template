@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-// import github from "../../assets/github.svg";
+
 import innowingLogo from "../../assets/innowing-logo-wide.png";
 import styles from "./Layout.module.css";
 

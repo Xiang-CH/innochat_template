@@ -49,14 +49,14 @@ const Chat = () => {
     var source = useRef<AudioBufferSourceNode | undefined>(undefined);
     var audioContext = useRef<AudioContext | undefined>(undefined);
 
-    // set defualt voice
+    // TODO set defualt voice
     const [voice, setVoice] = useState<string>("en-US-JennyNeural");
     const voiceOptions: IDropdownOption[] = [
         { key: "en-US-JennyNeural", text: "Default: Jenny" },
         { key: "en-US-__Name__Neural", text: "__Name__"},
     ];
 
-    // set defualt avatar
+    // TODO set defualt avatar
     const [currentAvatar, setCurrentAvatar] = useState<string>("cartoon");
 
     const dropdownStyles: Partial<IDropdownStyles> = {
@@ -367,7 +367,7 @@ const Chat = () => {
                         isFooterAtBottom={true}
                     >
                         
-                        <Dropdown
+                        {/* <Dropdown
                             onChange={onVoiceModelChange}
                             className={styles.chatSettingsSeparator}
                             defaultSelectedKey={voice}
@@ -383,7 +383,7 @@ const Chat = () => {
                             label="Activate Text to Speech"
                             onChange={() => setActivateTTS(!activateTTS)}
                             disabled={mode == "avatar"}
-                        />
+                        /> */}
 
                         <SpinButton
                             className={styles.chatSettingsSeparator}

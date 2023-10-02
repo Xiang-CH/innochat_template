@@ -42,20 +42,20 @@ export const avatar_const: {
         teeth: "Wolf3D_Teeth",
         voice: "en-US-GuyNeural"
     },
-    // custom: {
+    custom: {
         
-    //     scale: 0.7,
-    //     x: -0.12,
-    //     y: 0.55,
-    //     z: 0.1,
-    //     r: 0.15,
-    //     filename: "__FILENAME__.glb",
-    //     bg: "__BACKGROUND__.jpg",
-    //     voice: "__VOICE__",
+        scale: 0.7,
+        x: -0.12,
+        y: 0.55,
+        z: 0.1,
+        r: 0.15,
+        filename: "__FILENAME__.glb",
+        bg: "background.jpg",
+        voice: "__VOICE__",
 
-    //     head_dic: "Head",
-    //     head: "Wolf3D_Head",
-    //     teeth_dic: "Teeth",
-    //     teeth: "Wolf3D_Teeth",
-    // }
+        head_dic: "Head",
+        head: "Wolf3D_Head",
+        teeth_dic: "Teeth",
+        teeth: "Wolf3D_Teeth",
+    }
 };
