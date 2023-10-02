@@ -252,3 +252,4 @@ npm-debug.log*
 
 
 /app/.env
+!/prepdoc/data/The_Innovation_Wings.pdf
