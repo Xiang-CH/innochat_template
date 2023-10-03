@@ -255,3 +255,7 @@ npm-debug.log*
 
 /app/.env
 !/prepdoc/data/The_Innovation_Wings.pdf
+/app/backend/backend_env
+/app/backend/backend_env/*
+backend_env
+/app/backend/__pycache__

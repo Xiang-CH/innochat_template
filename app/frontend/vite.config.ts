@@ -11,12 +11,12 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            "/chat": "http://localhost:5000",
-            "/tts": "http://localhost:5000",
-            "/stt": "http://localhost:5000",
-            "/viseme": "http://localhost:5000",
-            "/visemeAudio": "http://localhost:5000",
-            "/content": "http://localhost:5000"
+            "/chat": "http://127.0.0.1:5000",
+            "/tts": "http://127.0.0.1:5000",
+            "/stt": "http://127.0.0.1:5000",
+            "/viseme": "http://127.0.0.1:5000",
+            "/visemeAudio": "http://127.0.0.1:5000",
+            "/content": "http://127.0.0.1:5000"
         }
     }
 });

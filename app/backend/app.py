@@ -109,6 +109,7 @@ def tts():
         SPEECH_KEY = os.environ.get("SPEECH_KEY")
 
         speech_config = speechsdk.SpeechConfig(subscription= SPEECH_KEY, region= SPEECH_REGION)
+        speech_config.speech_synthesis_voice_name = voice
         
         speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=None)
         speech_synthesis_result = speech_synthesizer.speak_text_async(text).get()
