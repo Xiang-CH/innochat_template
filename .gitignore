@@ -139,7 +139,9 @@ database/*
 app/backend/static/database/*
 !app/backend/static/database/blobs will be here.txt
 .DS_Store
+._.DS_Store
 **/.DS_Store
+**/._.DS_Store
 
 # Distribution / packaging
 .Python
