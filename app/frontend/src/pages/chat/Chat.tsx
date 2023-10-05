@@ -290,7 +290,7 @@ const Chat = () => {
                         </div>
                         {!lastQuestionRef.current && mode != "avatar" ? (
                             <div className={styles.chatEmptyState}>
-                                <h1 className={styles.chatEmptyStateTitle}>Chat about Innovation Wing</h1>
+                                <h1 className={styles.chatEmptyStateTitle}>Chat about your own data</h1>
                                 <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
                                 <ExampleList onExampleClicked={onExampleClicked} />
                             </div>
