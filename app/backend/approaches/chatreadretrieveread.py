@@ -31,14 +31,6 @@ class ChatReadRetrieveReadApproach(Approach):
     Try not to repeat questions that have already been asked.
     Only generate questions and do not generate any text before or after the questions, such as 'Next Questions'"""
 
-    query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered by searching in a knowledge base of The Tam Wing Fan Innovation Wing.
-    Generate a search query based on the conversation and the new question.
-    Do not include cited source filenames and document names e.g info.txt or doc.pdf in the search query terms.
-    Do not include any text inside [] or <<>> or {{}} in the search query terms.
-    Do not include any special characters like '+'.
-    If the question is not in English, translate the question to English before generating the search query.
-    If you cannot generate a search query, return just the number 0.
-    """
 
     def __init__(self, search_client: SearchClient, chatgpt_deployment: str, chatgpt_model: str, embedding_deployment: str, sourcepage_field: str, content_field: str):
         self.search_client = search_client

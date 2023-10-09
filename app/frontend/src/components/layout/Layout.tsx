@@ -47,7 +47,7 @@ const Layout = ({ setMode, mode }: Props) => {
                                 className={activeLink == "avatar" ? styles.headerNavPageLinkActive : styles.headerNavPageLink}
                                 onClick={onNavClick}
                             >
-                                Innova
+                                Avatar
                             </a>
                         </li>
                     </ul>

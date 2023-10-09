@@ -26,7 +26,6 @@ const Chat = () => {
     const [excludeCategory, setExcludeCategory] = useState<string>("");
     const [useSuggestFollowupQuestions, setUseSuggestFollowupQuestions] = useState<boolean>(false);
     const [activateTTS, setActivateTTS] = useState<boolean>(false);
-    const videoRef_ = useRef<HTMLVideoElement>(null);
 
     const lastQuestionRef = useRef<string>("");
     const chatMessageStreamEnd = useRef<HTMLDivElement | null>(null);
@@ -266,7 +265,6 @@ const Chat = () => {
 
     return (
         <div className={styles.layout}>
-            <video ref={videoRef_} autoPlay style={{ visibility: "hidden", position: "absolute" }} />
             {mode == "avatar" && <SelectAvatarButton setSelectedAvatar={setCurrentAvatar} selectedAvatar={currentAvatar} setSpeakText={setSpeakText} />}
 
             <Layout setMode={setMode} mode={mode} />
@@ -367,7 +365,7 @@ const Chat = () => {
                         isFooterAtBottom={true}
                     >
                         
-                        {/* <Dropdown
+                        <Dropdown
                             onChange={onVoiceModelChange}
                             className={styles.chatSettingsSeparator}
                             defaultSelectedKey={voice}
@@ -383,7 +381,7 @@ const Chat = () => {
                             label="Activate Text to Speech"
                             onChange={() => setActivateTTS(!activateTTS)}
                             disabled={mode == "avatar"}
-                        /> */}
+                        />
 
                         <SpinButton
                             className={styles.chatSettingsSeparator}
