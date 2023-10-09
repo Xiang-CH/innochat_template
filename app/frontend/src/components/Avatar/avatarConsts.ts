@@ -1,3 +1,4 @@
+import Config from "../../utils/Config";
 export const avatar_const: {
     [key: string]: {
         scale: number;
@@ -46,12 +47,12 @@ export const avatar_const: {
         
         scale: 0.7,
         x: -0.12,
-        y: 0.55,
+        y: Config.avatar_y_pos,
         z: 0.1,
         r: 0.15,
-        filename: "__FILENAME__.glb",
+        filename: Config.avatar_filename,
         bg: "background.jpg",
-        voice: "__VOICE__",
+        voice: Config.voice_key,
 
         head_dic: "Head",
         head: "Wolf3D_Head",

@@ -261,3 +261,5 @@ npm-debug.log*
 /app/backend/backend_env/*
 backend_env
 /app/backend/__pycache__
+/app/backend/approaches/__pycache__
+/app/backend/core/__pycache__

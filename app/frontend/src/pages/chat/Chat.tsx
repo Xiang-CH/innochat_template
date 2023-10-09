@@ -16,6 +16,8 @@ import { SelectAvatarButton } from "../../components/SelectAvatarButton/SelectAv
 import Layout from "../../components/layout/Layout";
 import Avatar from "../../components/Avatar/Avatar";
 
+import CustomConfig from "../../utils/Config";
+
 const Chat = () => {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
     const [promptTemplate, setPromptTemplate] = useState<string>("");
@@ -52,7 +54,7 @@ const Chat = () => {
     const [voice, setVoice] = useState<string>("en-US-JennyNeural");
     const voiceOptions: IDropdownOption[] = [
         { key: "en-US-JennyNeural", text: "Default: Jenny" },
-        { key: "en-US-__Name__Neural", text: "__Name__"},
+        { key: CustomConfig.voice_key, text: CustomConfig.voice_name},
     ];
 
     // TODO set defualt avatar

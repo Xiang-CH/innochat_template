@@ -28,7 +28,7 @@ const Layout = ({ setMode, mode }: Props) => {
                         <img src={innowingLogo} alt="Innowing logo" aria-label="Link to Innowing website" width="150px" />
                     </a>
                 </div>
-                {/* <nav>
+                <nav>
                     <ul className={styles.headerNavList}>
                         <li>
                             <a
@@ -51,7 +51,7 @@ const Layout = ({ setMode, mode }: Props) => {
                             </a>
                         </li>
                     </ul>
-                </nav> */}
+                </nav>
 
                 <h4 className={styles.headerRightText}>
                     Powered by: <span style={{ fontSize: 12 }}>Azure OpenAI</span>
