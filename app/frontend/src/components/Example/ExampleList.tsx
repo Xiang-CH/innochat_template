@@ -1,4 +1,5 @@
 import { Example } from "./Example";
+import Config from "../../Config";
 
 import styles from "./Example.module.css";
 
@@ -9,11 +10,16 @@ export type ExampleModel = {
 
 const EXAMPLES: ExampleModel[] = [
     {
-        text: "Who has the access to InnoWing?",
-        value: "Who has the access to Innovation Wing?"
+        text: Config.example_question_1,
+        value: Config.example_question_1
     },
-    { text: "How to become a member of InnoWing?", value: "How to become a member of InnoWing?" },
-    { text: "What is SIG?", value: "What is SIG?" }
+    { 
+        text: Config.example_question_2, 
+        value: Config.example_question_2
+    },
+    { 
+        text: Config.example_question_3, 
+        value: Config.example_question_3 }
 ];
 
 interface Props {

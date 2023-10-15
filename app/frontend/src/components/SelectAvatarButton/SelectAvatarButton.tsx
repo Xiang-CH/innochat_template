@@ -42,7 +42,7 @@ export const SelectAvatarButton = ({ setSelectedAvatar, selectedAvatar, setSpeak
                 />
             </div>
 
-            <div className={styles.logo}>
+            {/* <div className={styles.logo}>
                 <img
                     className={selectedAvatar === "custom" ? styles.logoSelected : styles.img}
                     src={custom_icon}
@@ -52,7 +52,7 @@ export const SelectAvatarButton = ({ setSelectedAvatar, selectedAvatar, setSpeak
                     width="80px"
                     onClick={() => onClick("custom")}
                 />
-            </div>
+            </div> */}
         </div>
     );
 };

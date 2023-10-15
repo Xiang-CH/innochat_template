@@ -16,7 +16,7 @@ import { SelectAvatarButton } from "../../components/SelectAvatarButton/SelectAv
 import Layout from "../../components/layout/Layout";
 import Avatar from "../../components/Avatar/Avatar";
 
-import CustomConfig from "../../utils/Config";
+import CustomConfig from "../../Config";
 
 const Chat = () => {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
@@ -290,7 +290,7 @@ const Chat = () => {
                         </div>
                         {!lastQuestionRef.current && mode != "avatar" ? (
                             <div className={styles.chatEmptyState}>
-                                <h1 className={styles.chatEmptyStateTitle}>Chat about your own data</h1>
+                                <h1 className={styles.chatEmptyStateTitle}>{CustomConfig.chat_page_title}</h1>
                                 <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
                                 <ExampleList onExampleClicked={onExampleClicked} />
                             </div>

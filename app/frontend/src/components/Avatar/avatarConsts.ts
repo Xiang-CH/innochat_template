@@ -1,4 +1,4 @@
-import Config from "../../utils/Config";
+import Config from "../../Config";
 export const avatar_const: {
     [key: string]: {
         scale: number;
